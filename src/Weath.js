@@ -15,7 +15,7 @@ const Weath = () => {
     const[result,setresult]=useState("")
     const enterHandler=(e)=>{
       if(e.key==="Enter"){
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=52b2c95c30dad4defb1c5a42ffc8700b`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid={api key}`)
         .then(response=>response.json())
         .then(data=>setresult(data))
         .catch(err=>console.log(err))
